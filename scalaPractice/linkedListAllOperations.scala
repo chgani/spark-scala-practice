@@ -46,8 +46,8 @@ object allOps {
     liList.insertFront(8)
     liList.insertFront(6)
     liList.insertFront(7)
-    liList.insertFront(4)
     liList.insertEnd(3)
+    liList.insertFront(4)
     liList.pushBetween(liList.head.next,9)
     liList.printList()
 
