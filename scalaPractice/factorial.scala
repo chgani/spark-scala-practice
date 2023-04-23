@@ -1,0 +1,18 @@
+package scalaPractice
+
+object factorial {
+  def main(args:Array[String]):Unit={
+    println("Enter a number: ")
+    val num = scala.io.StdIn.readInt()
+    val fact=factorial(num)
+    println(s"the factorial of $num is =$fact")
+  }
+def factorial(n:Int):Int={
+  var result:Int=1
+  for (i<-1 to n){
+    if(i==1) result
+    else result=result*i
+  }
+  result
+  }
+}
