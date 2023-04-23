@@ -20,15 +20,16 @@ var head:node1=null
   }
     def insertEnd(new_data:Int)={
       val new_node=new node1(new_data,null)
-      if(this.head==null){
-        this.head=new_node
+      if(head==null){
+        head=new_node
       }
       else {
-        var last:node1=head
-        while(last.next!=null){
-          last=last.next
-          last.next=new_node
+        var present:node1=head //we need to start from first and reach to end
+        while(present.next!=null){
+          present=present.next
+
       }
+        present.next=new_node
       }
     }
   def printList():Unit={
@@ -48,7 +49,7 @@ object allOps {
     liList.insertFront(7)
     liList.insertEnd(3)
     liList.insertFront(4)
-    liList.pushBetween(liList.head.next,9)
+    liList.pushBetween(liList.head.next.next,9)
     liList.printList()
 
   }
