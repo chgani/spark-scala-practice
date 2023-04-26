@@ -1,0 +1,6 @@
+Name|Age|Education|Year
+Ram|28|Maths,Physics,Chemistry|2021
+Rakesh|29|Biology,Physics,Chemistry|2021
+Madhu|21|Maths,Physics,Chemistry|2021
+Suman|21|Maths,Physics|2021
+Radhika|21||2021
