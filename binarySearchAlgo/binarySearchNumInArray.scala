@@ -3,6 +3,8 @@ package binarySearchAlgo
 object binarySearchNumInArray {
 def main(args:Array[String])={
   val arr = Array(3, 5, 7, 9, 12, 56, 89, 53, 1, 4)
+  val a=arr.sorted
+ println( a.mkString(" "))
   val target =4
   val result = search(arr, target)
   if(result>0) println(s"the index of $target in given array is : $result")
