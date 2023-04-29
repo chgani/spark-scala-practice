@@ -2,7 +2,7 @@ package arrayEasy
 
 object scalaArrayLargest3DSAL {
   def main(args:Array[String]):Unit={
-    val arr=Array(56,96,99,87,45,12,35,62,62,61,41,0,4)
+    val arr=Array(56,96,99,99,87,45,12,35,62,62,61,41,0,4)
     val len=arr.length
     val largest=printLargest3Numbers1(arr)
     println(largest.mkString(","))
