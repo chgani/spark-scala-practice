@@ -6,13 +6,13 @@ var head:node=null
 //  var next:node=null
 
   def insertFirst(data:Int)={
-    val node=new node(data)
+    val new_node=new node(data)
       if(head==null){
-        head=node
+        head=new_node
       }
      else{
-        node.next=head
-        head=node
+        new_node.next=head
+        head=new_node
         head.prev=null
       }
   }
