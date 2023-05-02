@@ -1,6 +1,6 @@
 package in.olc.scala.binarySearchAlgo
 
-//the given array is sorted
+//the given array is sorted(we need to apply binary search on sorted array only)
 //if we dont know whether the array is sorted in descending/ascending
 //in this case we can take any two elements and compare and get to know ascending/descending provided array is sorted
 //best way we can check first and last element
