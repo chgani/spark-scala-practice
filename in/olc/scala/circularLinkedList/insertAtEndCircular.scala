@@ -24,7 +24,7 @@ var head:node=null
     var temp:node=head
     if(temp!=null){
       do{
-        println(temp.data+" ")
+        print(temp.data+"=>")
         temp=temp.next
       } while(temp!=head)
     }

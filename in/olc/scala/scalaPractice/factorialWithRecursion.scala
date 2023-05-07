@@ -8,7 +8,7 @@ object factorialWithRecursion {
     println(s"The factorial of $num is =$fact")
   }
   def factorialR(n:Int,result:Int):Int={
-    if(n==1) result
+    if(n==0) result
     else n*factorialR(n-1,1)
   }
 

@@ -21,11 +21,11 @@ class insertAtBeginning {
     }
   }
 
-  def print(): Unit = {
+  def print_(): Unit = {
     var temp = head //temp variable is intialized with head
     if(temp!=null){
       do{
-        println(temp.data + " ")
+        print(temp.data+"=>")
         temp=temp.next
       } while(temp!=head)
     }
@@ -38,7 +38,7 @@ object circular{
     cList.insert(6)
     cList.insert(3)
     cList.insert(8)
-    cList.print()
+    cList.print_()
 
   }
 }
