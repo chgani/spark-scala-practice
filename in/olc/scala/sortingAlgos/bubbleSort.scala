@@ -1,4 +1,4 @@
-package in.olc.scala.bubbleSort
+package in.olc.scala.sortingAlgos
 
 object bubbleSort {
   def main(args: Array[String]) = {
