@@ -11,7 +11,7 @@ object bubbleSort {
     var swapped: Boolean = false
     for (i <- 0 until arr.length) {
       swapped = false
-      for (j <- 1 until arr.length - i) {
+      for (j <- 1 until arr.length-i) {
         if (arr(j) < arr(j - 1)) {
           val temp = arr(j)
           arr(j) = arr(j - 1)
