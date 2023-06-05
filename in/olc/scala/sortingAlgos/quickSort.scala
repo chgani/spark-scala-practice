@@ -32,7 +32,7 @@ object quickSort {
       }
     }
     swap(arr,i,p)
-    return i
+    i
   }
   def swap(arr:Array[Int],x:Int,y:Int):Unit={
     val temp=arr(x)
