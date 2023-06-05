@@ -15,14 +15,10 @@ object serachInString {
 
   def search(str: String, ch: Char): Boolean = {
     val n = str.length
-    if (n == 0) {
-      false
-    }
+    if (n == 0) false
     else {
       for (i <- 0 until n) {
-        if (ch == str.charAt(i)) {
-          return true
-        }
+        if (ch == str.charAt(i)) return true
       }
       false
     }
@@ -30,14 +26,10 @@ object serachInString {
 
   def search2(str1: String, ch1: Char): Boolean = {
     val n = str1.length
-    if (n == 0) {
-      false
-    }
+    if (n == 0) false
     else {
       for (ch <- str1.toCharArray) {
-        if (ch == ch1) {
-          return true
-        }
+        if (ch == ch1) return true
       }
       false
     }
