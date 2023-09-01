@@ -21,11 +21,11 @@ class reversalLinkedList {
   def display(): Unit = {
     var temp = head
     while (temp!= null) {
-      println(temp.data + " ")
+      print(temp.data + "-->")
       temp = temp.next
     }
   }
-  def reverse()={
+  def reverse():Unit={
     var prev:node_e=null
     var next:node_e=null
     var current=head //initially current=100
@@ -39,14 +39,14 @@ class reversalLinkedList {
   }
 }
   object reversal{
-    def main(args:Array[String])={
+    def main(args:Array[String]):Unit={
       val revLL=new reversalLinkedList
       revLL.insertEnd(5)
       revLL.insertEnd(7)
       revLL.insertEnd(6)
       revLL.insertEnd(8)
       revLL.display()
-      println("reversal")
+      println("\nreversal")
       revLL.reverse()
       revLL.display()
     }

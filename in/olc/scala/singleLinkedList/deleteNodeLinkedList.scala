@@ -25,7 +25,7 @@ class deleteNodeLinkedList {
   def printList(): Unit = {
     var temp: node2 = head
     while (temp != null) {
-      println(temp.data + "")
+      print(temp.data + "-->")
       temp = temp.next
     }
   }

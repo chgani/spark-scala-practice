@@ -22,7 +22,7 @@ class nodesCount {
   def printList(): Unit = {
     var temp = head
     while (temp != null) {
-      println(temp.data + " ")
+      print(temp.data + " =>")
       temp = temp.next
     }
   }
