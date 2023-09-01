@@ -9,7 +9,7 @@ object filterPrac {
     Logger.getLogger("org").setLevel(Level.ERROR)
     val spark = SparkSession.builder.appName("filter").master("local[*]").getOrCreate()
     import spark.implicits._
-//    val df = Seq(("Alice", 25), ("Bob", 30), ("Charlie", 35)).toDF("name","age")
+   // val df = Seq(("Alice", 25), ("Bob", 30), ("Charlie", 35)).toDF("name","age")
 //    val t_df=df.select(col("name"),col("age"),when(col("age")<30,"young").otherwise("old").as("category"))
 //t_df.show()
 //    val df2=df.filter(col("age")>25 && col("name").startsWith("C"))

@@ -11,6 +11,9 @@ object dateFunctions {
     val stockList = Seq(("PAYTM", "01-01-2022"), ("PAYTM", "02-01-2022"), ("PAYTM", "03-01-2022"),
       ("PAYTM", "04-01-2022"), ("PAYTM", "05-01-2022"), ("LIC", "01-01-2022"), ("LIC", "02-01-2022"),
       ("LIC", "03-01-2022"), ("LIC", "04-01-2022"))
+    val df1=stockList.toDF("company","date")
+    df1.show()
+
   }
 
 }

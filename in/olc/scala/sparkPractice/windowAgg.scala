@@ -68,10 +68,13 @@ object windowAgg {
       ("Product6", 300)
     ).toDF("Product", "Revenue")
 //,sum(col("Revenue").over(winspec).as("runningTotal"))
-    println(400/3)
+    println(salesData.rdd.getNumPartitions)
+ //   println(400/3)
     val winspec=Window.partitionBy("Product").orderBy("Revenue")
     val df=salesData.select(col("Product"),col("Revenue"),
       avg(col("Revenue")).over(winspec).as("Running Average"))
-    df.sort(col("Product")).show()
+  val df1=  df.coalesce(3)
+    df1.sort(col("Product")).show()
+  // Thread.sleep(600000)
 }
 }
