@@ -32,13 +32,14 @@ def isFib(n:Int):Boolean={
   var a=0
   var b=1
   var fib=a+b
-  while(fib<n){
+  while(fib < n){
     a=b
     b=fib
     fib=a+b
   }
   fib==n
-  }
+ }
+
   def positionFib(n:Int):Int={
     var a = 0
     var b = 1

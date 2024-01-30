@@ -11,7 +11,7 @@ if(n<2) {
 object fib{
   def main(args:Array[String]):Unit={
     val fibo=new nthFibonacci
-    val n:Int=6
+    val n:Int=15
     val result=fibo.fibonacci(n)
     println(s"the $n th number in fibonacci series is: $result")
   }

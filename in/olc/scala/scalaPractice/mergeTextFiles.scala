@@ -5,10 +5,10 @@ import scala.io.Source
 
 object mergeTextFiles {
   def main(args: Array[String]) {
-    val folderPath = "C:/Ganesh/New"
-    val outputFile = "C:/Ganesh/output.txt"
+    val folderPath = "C:/Ganesh/Scala/spark-scala-examples/src/main/scala/com/sparkbyexamples/spark/rdd/functions"
+    val outputFile = "C:/Ganesh/rdd_functions.txt"
     val folder = new File(folderPath)
-    val files = folder.listFiles.filter(_.isFile).filter(_.getName.endsWith(".txt"))
+    val files = folder.listFiles.filter(_.isFile).filter(_.getName.endsWith(".scala"))
 
     val writer = new PrintWriter(outputFile)
     for (file <- files) {

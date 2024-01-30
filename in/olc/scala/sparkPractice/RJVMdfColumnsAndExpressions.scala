@@ -71,7 +71,7 @@ object RJVMdfColumnsAndExpressions extends App {
   val carsWithColumnRenamedDf=carsDf.withColumnRenamed("weight_in_lbs","Weight in pounds")
   //carsWithColumnRenamedDf.show()
 
-  //careful with columnn names => when we select a column having spaces in name we need to select that column by following means
+  //careful with column names => when we select a column having spaces in name we need to select that column by following means
   carsWithColumnRenamedDf.selectExpr("`weight in pounds`")
     //.show()
 

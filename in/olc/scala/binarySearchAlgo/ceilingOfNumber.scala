@@ -7,7 +7,7 @@ object ceilingOfNumber {
 def main(args:Array[String])={
     val arr = Array(1,3,4,5, 7, 9, 12, 53,56, 89)
    println( arr.mkString(" "))
-    val target =9
+    val target =10
     val result = arr(searchCeil(arr, target))
   println(s"the smallest number which is greater or equal to $target in the given array is $result")
 }

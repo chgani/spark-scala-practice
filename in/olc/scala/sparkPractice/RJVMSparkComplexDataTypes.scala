@@ -12,7 +12,8 @@ object RJVMSparkComplexDataTypes  extends App {
     .getOrCreate()
 
   val movieDf=spark.read.option("inferSchema",true).json("src/main/resources/data/movies.json")
-//movieDf.printSchema()
+movieDf.printSchema()
+  movieDf.show()
   //Dates =>date_add,date_sub
  val moviesWithDateDf= movieDf.select(col("Title"),to_date(col("Release_Date"),"dd-MMM-yy").as("Actual_Release"))
 //  dateDf.show()
@@ -21,7 +22,7 @@ object RJVMSparkComplexDataTypes  extends App {
     .withColumn("Right_now",current_timestamp())
     .withColumn("Age_of_Movie",datediff(col("Today"),col("Actual_Release"))/365)
 
-  //in some cases the format of the date column which we have passes in to_date will be different thatn other.
+  //in some cases the format of the date column which we have passes in to_date will be different than other.
   //in that cases , it will show that value as null
 
   moviesWithDateDf.select("*").where(col("Actual_Release").isNull)//.show()

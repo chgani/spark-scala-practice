@@ -10,7 +10,7 @@ object factorial {
 def factorial(n:Int):Int={
   var result:Int=1
   for (i<-1 to n){
-    if(i==1) result
+    if(n==1)  return result
     else result=result*i
   }
   result

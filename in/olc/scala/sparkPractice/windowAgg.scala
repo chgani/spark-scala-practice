@@ -15,17 +15,20 @@ object windowAgg {
 
   import spark.implicits._
 
-//  val salesData = Seq(
-//    ("Product1", "Category1", 100),
-//    ("Product2", "Category2", 200),
-//    ("Product3", "Category1", 150),
-//    ("Product4", "Category3", 300),
-//    ("Product5", "Category2", 250),
-//    ("Product6", "Category3", 180)
-//  ).toDF("Product", "Category", "Revenue")
-//
-//  val winFun = Window.partitionBy("Category").orderBy("Revenue")
-//  val df = salesData.select(col("*"),sum("Revenue").over(winFun).as("Running total"))
+  val salesData1 = Seq(
+    ("Product1", "Category1", 100),
+    ("Product2", "Category2", 200),
+    ("Product3", "Category1", 150),
+    ("Product4", "Category3", 300),
+    ("Product5", "Category2", 250),
+    ("Product6", "Category3", 180)
+  ).toDF("Product", "Category", "Revenue")
+
+  val winFun = Window.partitionBy("Category").orderBy("Revenue")
+
+//    val df_1=salesData1.select(col("Product"),row_number().over(winFun))
+//    df_1.show()
+//  val df = salesData 1.select(col("*"),sum("Revenue").over(winFun).as("Running total"))
 //  //df.show()
 //
 ////Finding the maximum revenue for each product category and the corresponding product.
@@ -74,7 +77,7 @@ object windowAgg {
     val df=salesData.select(col("Product"),col("Revenue"),
       avg(col("Revenue")).over(winspec).as("Running Average"))
   val df1=  df.coalesce(3)
-    df1.sort(col("Product")).show()
+   // df1.sort(col("Product")).show()
   // Thread.sleep(600000)
 }
 }

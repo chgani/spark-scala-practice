@@ -2,7 +2,7 @@ package in.olc.scala.scalaPractice
 
 object replacePrimeNumberIndex {
   def main(args:Array[String]):Unit={
-println(replace(1))
+println(replace(5))
   }
 def isPrime(n:Int):Boolean= {
   if (n == 0 || n == 1) false

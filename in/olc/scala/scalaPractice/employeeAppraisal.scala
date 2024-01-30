@@ -1,4 +1,4 @@
-package in.olc.scala.scalaPractice
+ package in.olc.scala.scalaPractice
 
 case class Employee(id:Int,email:String,salary:Salary,age:Int)
 case class Salary(basic:Double,hra:Double,ta:Double)

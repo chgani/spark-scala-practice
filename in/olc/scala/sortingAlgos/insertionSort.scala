@@ -7,7 +7,7 @@ object insertionSort {
     println(arr.mkString(" "))
   }
 def insertion (arr:Array[Int]):Array[Int]={
-  for(i<-0 to arr.length-2){
+  for(i<-0 until arr.length-1){
     var j=i+1
 //    while(j>0) {
 //      if (arr(j) < arr(j - 1)) {

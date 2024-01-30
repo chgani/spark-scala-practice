@@ -15,13 +15,13 @@ object multiDataScenario {
    println("-----------------in_df-----------------------------")
     in_df.printSchema()
     in_df.show(false)
-    val df2=in_df.withColumn("subject",explode(split(in_df("Education"),","))).drop("Education")
+    val df2=in_df.withColumn("subject_explode",explode(split(in_df("Education"),","))).drop("Education")
     println("-----------------df2-----------------------------")//explode will not show null record
     df2.printSchema()
     df2.show()
 
     println("-----------------df3-----------------------------")
-    val df3 = in_df.withColumn("subject", explode_outer(split(in_df("Education"), ","))).drop("Education")
+    val df3 = in_df.withColumn("subject_explodeouter", explode_outer(split(in_df("Education"), ","))).drop("Education")
     df3.printSchema()  //will show null record
     df3.show()
     println("-----------------poseexplode-----------------------------")

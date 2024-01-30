@@ -7,8 +7,8 @@ object fabonacci {
     var count=0
     var a=0
     var b=1
-    println(s"Fibonacci series upto $num is :-")
-    while(count<=num){
+    println(s"First $num numbers in Fibonacci series are :-")
+    while(count<num){
       println(a) //0,1,1,2,
       val c=a+b
       a=b //1,1,2
